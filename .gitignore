@@ -1,0 +1,15 @@
+# Folders
+obj/
+bin/
+src/gfx/head_storage
+
+# Object files
+*.src
+
+# Executables
+.8xp
+.bin
+
+# Debug files
+*.debug
+

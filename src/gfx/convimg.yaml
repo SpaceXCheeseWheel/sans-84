@@ -1,0 +1,69 @@
+palettes:
+    - name: global_palette
+      fixed-entries:
+          - color: { index: 1, r: 0, g: 0, b: 0 }
+          - color: { index: 2, r: 255, g: 255, b: 255 }
+          - color: { index: 0, r: 226, g: 51, b: 226 }
+      images: automatic
+
+converts:
+    - name: shead
+      palette: global_palette
+      transparent-color-index: 0
+      compress: zx7
+      tilesets:
+          tile-width: 32
+          tile-height: 30
+          images:
+              - t_heads.png
+
+    - name: sbody
+      palette: global_palette
+      #transparent-color-index: 255
+      compress: zx7
+      tilesets:
+          tile-width: 75
+          tile-height: 49
+          images:
+              - t_body.png
+
+    - name: slegs
+      palette: global_palette
+      #transparent-color-index: 255
+      compress: zx7
+      tilesets:
+          tile-width: 49
+          tile-height: 21
+          images:
+              - t_legs.png
+
+    - name: pheart
+      palette: global_palette
+      #transparent-color-index: 0
+      compress: zx7
+      tilesets:
+          tile-width: 20
+          tile-height: 16
+          images:
+              - p_heart.png
+    - name: buttons
+      palette: global_palette
+      #transparent-color-index: 255
+      compress: zx7
+      tilesets:
+          tile-width: 73
+          tile-height: 28
+          images:
+              - buttons.png
+
+outputs:
+    - type: c
+      include-file: gfx.h
+      palettes:
+          - global_palette
+      converts:
+          - shead
+          - sbody
+          - slegs
+          - buttons
+          - pheart

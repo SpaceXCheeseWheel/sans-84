@@ -1,0 +1,45 @@
+// Bones Array - stores "bones" in current play area. 
+// DOES NOT store bones to be played, only ones that are going to be rendered on the current frame.
+
+{
+    -- Static - set when bone is created and does not change during the duration.
+    // Direction of travel: 0, 1, 2, 3. Orientation automatically selected. 0, N to S, 1, E to W, etc.
+    // Speed
+    // Lenth from corner of screen.
+    // Bint to Top or Bottom?
+    // Blue?
+    // Time to next bone
+    
+    -- Changes
+    // Current X,Y
+}
+
+
+sansAnimArray{ 
+X,Y, ROOT LOCATION
+}
+
+HeadAnimOffset  Move Head
+BodyAnimOffset  Move Body
+LegsAnimOffset  Move Legs
+
+
+
+sansBaseArray   Whole Body Offset
+
+------------------------------
+How to store Animations
+
+SansIdle
+Frame 1 {Delay}{MainXY}{{Head X,Y}{Body X,Y}{Legs X,Y}}
+Frame 2 {Delay}{MainXY}{{Head X,Y}{Body X,Y}{Legs X,Y}}
+
+
+
+{   5, 1, // Delay since last frame, Scale Factor
+    x,y,  // Master XY
+    x,Y, 
+    x,Y,
+    x,y,
+}
+
